@@ -15,10 +15,10 @@ $(document).ready(function() {
 		//console.log(query);
 		
 		$.getJSON(URL, query, function(data) {
-			console.log('API CB', data);
+			//console.log('API CB', data);
 			//gData = data;
-			console.log(data);
-			//render(data);
+			//console.log(data);
+			render(data);
 		});
 		
 	});	
@@ -31,13 +31,14 @@ $(document).ready(function() {
 //render function
 var render = function(data) {
 	let videoURL = `${data.items[0].id.videoId}`;
-	let videoTitle = `${data.items[0].snippets.thumbnail.title}`;
-	let videoPic = `${data.items[0].snippets.thumbnail.high.url}`;
+	let videoTitle = `${data.items[0].snippet.title}`;
+	let videoPic = `${data.items[0].snippet.thumbnails.high.url}`;
 	
-	$('#container').append(videoPic);
-	$('#container').append(videoTitle);
-	$('#container').append(videoURL);
-	$('#container').append(`This is where the videos gonna be`);
+
+	let template = `<p>${videoTitle}</p>
+				   <a href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
+
+	$('#container').append(template);
 };
 
 
