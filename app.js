@@ -23,7 +23,9 @@ $(document).ready(function() {
 //								render(video)));	
 			data.items.map(item => render(item));
 		});
-		
+		// $("a").on("click", function(event) {
+		// 	$(".modal").append();
+		// })
 	});
 });
 
@@ -39,7 +41,7 @@ var render = function(data) {
 	
 
 	let template = `<p>${videoTitle}</p>
-				   <a href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
+				   <a class="iframe" href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
 
 	$('#container').append(template);
 };
