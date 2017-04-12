@@ -18,11 +18,14 @@ $(document).ready(function() {
 			//console.log('API CB', data);
 			//gData = data;
 			//console.log(data);
-			render(data);
+//			$.each(data => 
+//						 	data.items.map(video => 
+//								render(video)));	
+			data.items.map(item => render(item));
 		});
 		
-	});	
-})
+	});
+});
 
 //$.getJSON(website, searchQ, callback);
 
@@ -30,9 +33,9 @@ $(document).ready(function() {
 
 //render function
 var render = function(data) {
-	let videoURL = `${data.items[0].id.videoId}`;
-	let videoTitle = `${data.items[0].snippet.title}`;
-	let videoPic = `${data.items[0].snippet.thumbnails.high.url}`;
+	let videoURL = `${data.id.videoId}`;
+	let videoTitle = `${data.snippet.title}`;
+	let videoPic = `${data.snippet.thumbnails.high.url}`;
 	
 
 	let template = `<p>${videoTitle}</p>
