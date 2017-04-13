@@ -30,8 +30,7 @@ var render = function(data) {
 	let videoPic = `${data.snippet.thumbnails.medium.url}`;
 	
 
-	let template = `<p>${videoTitle}</p>
-				   <a href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
+	let template = `<p>${videoTitle}</p><a href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
 																																//<video src="https://youtube.com/...."></video>
 																																//<video controls> <source src="HCCCGoodFridayAppeal.mkv" alt="HCCC Appeal"> </video>
 //	Create images without <a href>
@@ -40,12 +39,12 @@ var render = function(data) {
 //Ergo may need to have the img inside a div, with click event on div
 //<iframe width="560" height="315" src="https://www.youtube.com/embed/DlzxIy-ij4g" frameborder="0" allowfullscreen></iframe>
 
-	$('#container').append(template);
+	$('#results').prepend(template);
 };
-
-$('a').on('click', function() {
-	<iframe width="560" height="315" src="https://www.youtube.com/embed/DlzxIy-ij4g" frameborder="0" allowfullscreen>
-})
+//
+//$('a').on('click', function(event) {
+//	$('#container').html(`<iframe width="560" height="315" src="https://www.youtube.com/watch?v=${videoURL}" frameborder="0" allowfullscreen>`);
+//});
 
 //<video src="https://youtube.com/...."></video>
 //<video controls> <source src="HCCCGoodFridayAppeal.mkv" alt="HCCC Appeal"> </video>
