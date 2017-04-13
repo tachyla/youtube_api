@@ -2,3 +2,8 @@
 	border: 1px solid black;
 	background: yellow;
 }
+
+#preload {
+	height: 500px;
+	width: 700px;
+}

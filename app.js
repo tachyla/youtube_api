@@ -31,6 +31,8 @@ var render = function(data) {
 	
 
 	let template = `<p>${videoTitle}</p><a href="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></a>`;
+  //let template = `<p>${videoTitle}</p><video src="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></video>`;
+	//let template = `<p>${videoTitle}</p><a><iframe width="560" height="315" src="https://www.youtube.com/watch?v=${videoURL}"><img src="${videoPic}"></iframe></a>`;
 																																//<video src="https://youtube.com/...."></video>
 																																//<video controls> <source src="HCCCGoodFridayAppeal.mkv" alt="HCCC Appeal"> </video>
 //	Create images without <a href>
